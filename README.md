@@ -1,4 +1,4 @@
-# Version_Beta_Project
+# Eat or Beat
 
 This project aims to provide suggestions on food items based on previous dataset obtained through a fitness device like fitbit, using an android application.
 
