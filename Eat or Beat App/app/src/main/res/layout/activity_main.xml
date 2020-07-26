@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradientbackground">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/graylight"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="5dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Weight :" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/TxtWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Enter your Weight"
+                    android:inputType="numberDecimal" />
+
+                <Spinner
+                    android:id="@+id/SpinnerWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:entries="@array/weight" />
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="30dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Height:" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/TxtHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Enter your Height"
+                    android:inputType="numberDecimal" />
+
+                <Spinner
+                    android:id="@+id/SpinnerHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:entries="@array/height" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+    <TextView
+
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Result"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bmi"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/blue_background"
+        android:text="Calculate BMI"
+        android:textColor="@color/graylight" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bmi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/blue_background"
+        android:text="Scan BarCode"
+        android:drawableLeft="@drawable/barcode"
+        android:textColor="@color/graylight" />
+
+
+
+
+    <TextView
+        android:id="@+id/TxtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bmi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="none"
+        android:textSize="23sp" />
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_marginTop="30dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/buttonLinearLayout"
+    android:layout_below="@+id/button"
+    android:layout_centerHorizontal="true">
+    <Button
+        android:id="@+id/speech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/blue_background"
+        android:text="Speak Up"
+        android:layout_marginRight="4dp"
+        android:drawableLeft="@drawable/mic"
+        android:onClick="speechR"
+        android:textColor="@color/graylight" />
+    <Button
+        android:id="@+id/goForSpeech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/speechRes"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/blue_background"
+        android:drawableLeft="@drawable/search"
+        android:text="  Search"
+        android:textColor="@color/graylight" />
+</LinearLayout>
+    <TextView
+        android:id="@+id/speechRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLinearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp" />
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Eat Or Beat</string>
+
+    <string-array name="weight">
+        <item>kg</item>
+        <item>lbs </item>
+    </string-array>
+
+    <string-array name="height">
+        <item>ft</item>
+        <item>cm</item>
+    </string-array>
+</resources>

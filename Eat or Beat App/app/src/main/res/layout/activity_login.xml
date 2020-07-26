@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".LoginActivity"
+    android:background="@drawable/gradientbackground">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/logomak"
+    />
+
+    <EditText
+        android:id="@+id/ETemail"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:background="@drawable/rounded_edittext"
+        android:layout_height="35dp"
+        android:layout_margin="15dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        />
+
+    <EditText
+        android:gravity="center"
+        android:id="@+id/ETpassword"
+        android:background="@drawable/rounded_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="15dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
+    <Button
+        android:id="@+id/btnSignUp"
+        android:background="@drawable/blue_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textColor="@color/graylight"
+        android:text="Sign Up"/>
+    <TextView
+        android:id="@+id/TVSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Sign in Here"
+        android:textColor="@color/graylight"
+        android:layout_margin="15dp"
+        android:textSize="20dp"/>
+</LinearLayout>
